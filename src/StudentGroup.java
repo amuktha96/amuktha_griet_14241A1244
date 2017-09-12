@@ -1,4 +1,7 @@
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.Scanner;
 
 /**
  * A fix-sized array of students
@@ -12,10 +15,12 @@ import java.util.Date;
  *
  */
 public class StudentGroup implements StudentArrayOperation {
-
+        
 	private Student[] students;
+        ArrayList<Student> list = new ArrayList<>(Arrays.asList(students));
 	
-	/**
+        public String str;
+        /**
 	 * DO NOT remove or change this constructor, it will be used during task check
 	 * @param length
 	 */
@@ -24,45 +29,50 @@ public class StudentGroup implements StudentArrayOperation {
 	}
 
 	@Override
-	public Student[] getStudents() {
-		// Add your implementation here
-		return null;
+	public Student[] getStudents() {	
+                return this.students;
 	}
 
 	@Override
 	public void setStudents(Student[] students) {
-		// Add your implementation here
+        //ArrayList<Student> list = new ArrayList<>(Arrays.asList(students));
+        //for(int i=0;i<students.length;i++)
+        //{
+          //  list.add;
+        //}    
 	}
 
 	@Override
 	public Student getStudent(int index) {
-		// Add your implementation here
-		return null;
+           return null;
 	}
 
 	@Override
 	public void setStudent(Student student, int index) {
-		// Add your implementation here
+		
 	}
 
 	@Override
 	public void addFirst(Student student) {
-		// Add your implementation here
+		list.add(0, student);
 	}
 
 	@Override
 	public void addLast(Student student) {
-		// Add your implementation here
+		int size=list.size();
+                list.add(size, student);
 	}
 
 	@Override
 	public void add(Student student, int index) {
-		// Add your implementation here
+		for(int i=0;i<students.length;i++){
+                list.add(i,student);
+                }
 	}
 
 	@Override
 	public void remove(int index) {
-		// Add your implementation here
+		
 	}
 
 	@Override

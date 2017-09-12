@@ -37,7 +37,6 @@ public class Student implements Comparable {
 		this.birthDate = birthDate;
 		this.avgMark = avgMark;
 	}
-
 	public int getId() {
 		return id;
 	}
